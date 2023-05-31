@@ -53,6 +53,9 @@ The available patients are the one available for options parameters mentioned in
    1. Download and Install the apk file on android device
    2. Run the the REST API `rest_api.py IP PORT` e.g `rest_api.py 192.168.0.2 5000`
    3. In the application provide the selected IP and Port
+   
+   ![](SettingsScreenShot.png)
+
 
 ### Load the pre-trained models on the application
    1. After running the application select the patient you want to load from the Settings Tab
@@ -61,7 +64,8 @@ The available patients are the one available for options parameters mentioned in
 ### Train on data that we got on the android application
    1. Connect with the API
    2. Send the gathered data by pressing the Button SEND PATIENT DATA
-   3. To get the Model Press GET MODEL
+   4. Train the model by running `run.py <patient_data_file_name> <epochs>`
+   3. To get the Model Press GET MODEL after training is completed
 
 
 ## License
