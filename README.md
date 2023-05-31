@@ -1,7 +1,6 @@
 # AAPS
 
-A brief description of what this project does and who it's for
-This project is combination of multiple parts. It contain a simulator for multiple virtual type 1 diabetes patients, artificial neural networks for glucose prediction and insulin dosage calculation. In this project is also included multiple script that allow the training for a new model for glucose prediciton and insulin calculation. The script to tranform them into a tflite file so that they can be read into the android application. The REST API for tranfering and training models between the computer and the Android application is also included.
+This is a simulator for multiple virtual type 1 diabetes patients, also included are artificial neural networks for glucose prediction and insulin dosage calculation. In this project is also included multiple script that allow the training for new models for glucose prediciton and insulin calculation. The script to tranform them into a tflite file so that they can be read into the android application. The REST API for tranfering and training models between the computer and the Android application is also included.
 
 
 ## Installation
