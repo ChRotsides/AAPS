@@ -6,16 +6,17 @@ This is a simulator for multiple virtual type 1 diabetes patients, also included
 ## Installation
 
 Details about how to install
-1. Create a Python virtual environment: `python3 -m venv <env_name>`
-2. Activate the environment: 
-    For windows, run: `<env_name>\Scripts\activate`
-    For Unix or MacOS, run: `source <env_name>/bin/activate`
-3. Install the requirements : `pip install -r requirements.txt`
+
+   1. Create a Python virtual environment: `python3 -m venv <env_name>`
+   2. Activate the environment: 
+      For windows, run: `<env_name>\Scripts\activate`
+      For Unix or MacOS, run: `source <env_name>/bin/activate`
+   3. Install the requirements : `pip install -r requirements.txt`
 
 
 ## Usage
 
-Examples of how to use the project, screenshots, etc.
+
 ### Generate New Virtual Patient Data
 1. In the python file `generatePatients.py` change the options list to include all the patients you want to generate new data for.
 2. Change the Days and time parameters to change for how long the generated data will be for
@@ -65,5 +66,4 @@ The available patients are the one available for options parameters mentioned in
 
 ## License
 
-Information about your license
 This project was completed by Antreana Christoforidi, Charalambos Rotsides, Constantinos Palochis, Maria Ashikali, and Theofanis Lymbouris as part of our final thesis for our Computer Engineering Degree. 
