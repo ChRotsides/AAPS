@@ -6,7 +6,7 @@ The third-party software below keeps its own license.
 
 The virtual patients, CGM sensor and insulin pump models come from
 [simglucose](https://github.com/jxx123/simglucose) by Jinyu Xie, which is installed as a dependency
-(`simglucose==0.2.3`) and is not redistributed in this repository.
+(`simglucose==0.2.2`) and is not redistributed in this repository.
 Small parts of `GlucoseEnv.py` and `gym_glucose/envs/GlucoseEnv.py` (the `risk_index` function, the
 `Step` helper and the structure of the `step`/`mini_step` loop) are adapted from simglucose and remain
 under its license:

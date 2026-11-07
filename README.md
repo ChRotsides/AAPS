@@ -150,7 +150,7 @@ pip install -r requirements.txt
 ```
 
 `requirements.txt` pins TensorFlow 2.11.0 with NumPy 1.23.5 (TensorFlow 2.11 does not work with NumPy 2.x),
-simglucose 0.2.3 and gym 0.9.4. All scripts expect to be run from the repository root.
+simglucose 0.2.2 and gym 0.9.4. All scripts expect to be run from the repository root.
 
 ## Usage
 
