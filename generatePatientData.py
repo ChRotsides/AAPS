@@ -13,7 +13,7 @@ class GenPatientData():
         self.glucoseModel.load_weights("OrginalModels/weights20-20-age-3layers-256-time.h5")
         self.glucoseModel.load_scalar("scalar20-20-age-3layers-256-time")
         self.insulinModel=self.glucoseModel.create_insulin_full_model()
-        self.insulinModel.load_weights("OrginalModels\model_20_action_weights_dqn_keras.h5")
+        self.insulinModel.load_weights("OrginalModels/model_20_action_weights_dqn_keras.h5")
         # self.glucoseModel.model.compile_model()
 
     def run(self,loops):

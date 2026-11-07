@@ -1,29 +1,19 @@
+import os
+import warnings
+from collections import namedtuple
+from datetime import datetime
+
 import numpy as np
-import tensorflow as tf
-from tensorflow import keras
-# from tensorflow.keras import layers
-import gym
-import scipy.signal
-import time
-# from machineLearn4 import LSTMModel
-from simglucose.simulation.env import T1DSimEnv
-from simglucose.controller.basal_bolus_ctrller import BBController
-from simglucose.sensor.cgm import CGMSensor
+import pandas as pd
+import simglucose
 from simglucose.actuator.pump import InsulinPump
 from simglucose.patient.t1dpatient import T1DPatient
+from simglucose.sensor.cgm import CGMSensor
+from simglucose.simulation.env import T1DSimEnv
 from simglucose.simulation.scenario_gen import RandomScenario
-from simglucose.simulation.scenario import CustomScenario
-from simglucose.simulation.sim_engine import SimObj, sim, batch_sim
-from datetime import timedelta
-from datetime import datetime
-from keras import regularizers
-import pkg_resources
-import math
-import pandas as pd
-import warnings
-import struct
-from collections import namedtuple
-from keras.models import load_model
+
+# Note: this module deliberately does not import TensorFlow, so the simulator
+# can be used (and tested) without the heavy ML dependencies.
 # tf.config.run_functions_eagerly(True)
 Action = namedtuple("patient_action", ['CHO', 'insulin'])
 action_ =namedtuple("action", ['basal', 'bolus'])
@@ -43,10 +33,9 @@ except ImportError:
         """
         return _Step(observation, reward, done, kwargs)
 
-PATIENT_QUEST_FILE = pkg_resources.resource_filename(
-    'simglucose', 'params/Quest.csv')
-PATIENT_PARAM_FILE = pkg_resources.resource_filename(
-    'simglucose', 'params/vpatient_params.csv')
+_SIMGLUCOSE_DIR = os.path.dirname(os.path.abspath(simglucose.__file__))
+PATIENT_QUEST_FILE = os.path.join(_SIMGLUCOSE_DIR, 'params', 'Quest.csv')
+PATIENT_PARAM_FILE = os.path.join(_SIMGLUCOSE_DIR, 'params', 'vpatient_params.csv')
 # patient_name='adolescent#001'
 
 def risk_index(BG, horizon):

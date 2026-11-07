@@ -9,7 +9,7 @@ ml=LSTMModel(256,20,4,20)
 patient_name="child#008"
 epochs=20
 
-ml.load_weights("GlucosePatientModels\Patient_"+patient_name+"_Dexcom_Insulet_patientDataweights20-20-age-3layers-256-time.h5")
+ml.load_weights("GlucosePatientModels/Patient_"+patient_name+"_Dexcom_Insulet_patientDataweights20-20-age-3layers-256-time.h5")
 # ml.load_weights("PatientModels/Patient_adolescent#007_Dexcom_Insulet_patientDataweights20-20-age-3layers-256-time.h5")
 ml.load_scalar("scalar20-20-age-3layers-256-time")
 # K.set_value(ml.model.optimizer.learning_rate, 0.001)

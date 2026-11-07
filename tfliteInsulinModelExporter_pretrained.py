@@ -80,7 +80,7 @@ def checkAndgetArgs():
 
 def main():
     patient_name= checkAndgetArgs()
-    originalModelPath="InsulinPatientModels\Insulin_"+patient_name+"_model_20_action_weights_dqn_keras.h5"
+    originalModelPath="InsulinPatientModels/Insulin_"+patient_name+"_model_20_action_weights_dqn_keras.h5"
     newModelPath1="SplitInsulinModels/Insulin_"+patient_name+"_model_20_action_weights_dqn_keras-part1"
     newModelPath2="SplitInsulinModels/Insulin_"+patient_name+"_model_20_action_weights_dqn_keras-part2"
     model_full=create_insulin_full_model()

@@ -154,7 +154,7 @@ class GlucoseEnvironment:
         self.glucose_predictor=LSTMModel(256,20,4,20)
         # self.glucose_predictor.load_model("model20-20-age-3layers-256-time","scalar20-20-age-3layers-256-time")
         self.glucose_predictor.load_scalar("scalar20-20-age-3layers-256-time")
-        self.glucose_predictor.load_weights("GlucosePatientModels\Patient_"+patient_name+"_Dexcom_Insulet_patientDataweights20-20-age-3layers-256-time.h5")
+        self.glucose_predictor.load_weights("GlucosePatientModels/Patient_"+patient_name+"_Dexcom_Insulet_patientDataweights20-20-age-3layers-256-time.h5")
         self.patient_name=patient_name
         self.sensor_name=sensor_name
         self.pump_name=pump_name

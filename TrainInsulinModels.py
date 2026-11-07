@@ -7,9 +7,6 @@ import random
 from keras.layers import Dense, LSTM, Input, concatenate
 import scipy.stats as stats
 import logging
-from rl.agents import DQNAgent
-from rl.policy import BoltzmannQPolicy
-from rl.memory import SequentialMemory
 # import gym
 # import gym_glucose.envs.MyGym as MyGym
 from gym_glucose.envs.GlucoseEnv import GlucoseEnvironment
@@ -59,15 +56,15 @@ def get_correct_models_for_patient(patient_name,choice=0):
     model_20_action_for_setting_weights=create_model_20_action(patient_name)
     model_target_20_action_for_setting_weights=create_model_20_action(patient_name)
     if choice==0:
-        model_20_action_for_setting_weights.load_weights("OrginalModels\model_20_action_weights_dqn_keras.h5")
-        model_target_20_action_for_setting_weights.load_weights("OrginalModels\model_20_action_weights_dqn_keras.h5")
+        model_20_action_for_setting_weights.load_weights("OrginalModels/model_20_action_weights_dqn_keras.h5")
+        model_target_20_action_for_setting_weights.load_weights("OrginalModels/model_20_action_weights_dqn_keras.h5")
     else:
         try:
-            model_20_action_for_setting_weights.load_weights("InsulinPatientModels\Insulin_"+patient_name+"_model_20_action_weights_dqn_keras.h5")
-            model_target_20_action_for_setting_weights.load_weights("InsulinPatientModels\Insulin_"+patient_name+"_model_target_20_action_weights_dqn_keras.h5")
+            model_20_action_for_setting_weights.load_weights("InsulinPatientModels/Insulin_"+patient_name+"_model_20_action_weights_dqn_keras.h5")
+            model_target_20_action_for_setting_weights.load_weights("InsulinPatientModels/Insulin_"+patient_name+"_model_target_20_action_weights_dqn_keras.h5")
         except:
-            model_20_action_for_setting_weights.load_weights("OrginalModels\model_20_action_weights_dqn_keras.h5")
-            model_target_20_action_for_setting_weights.load_weights("OrginalModels\model_20_action_weights_dqn_keras.h5")
+            model_20_action_for_setting_weights.load_weights("OrginalModels/model_20_action_weights_dqn_keras.h5")
+            model_target_20_action_for_setting_weights.load_weights("OrginalModels/model_20_action_weights_dqn_keras.h5")
 
     model_20_action.layers[1].set_weights(model_20_action_for_setting_weights.layers[1].get_weights())
     model_20_action.layers[2].set_weights(model_20_action_for_setting_weights.layers[2].get_weights())

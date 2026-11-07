@@ -41,7 +41,7 @@ class EvaluateGlucoseModels:
             self.glucoseModel.load_weights("GlucosePatientModels/Patient_"+patient_name+"_"+sensor+"_"+pump+"_patientDataweights20-20-age-3layers-256-time.h5")
             self.glucoseModel.load_scalar("scalar20-20-age-3layers-256-time")
             self.insulinModel=self.glucoseModel.create_insulin_full_model()
-            self.insulinModel.load_weights("InsulinPatientModels\Insulin_"+patient_name+"_model_20_action_weights_dqn_keras.h5")
+            self.insulinModel.load_weights("InsulinPatientModels/Insulin_"+patient_name+"_model_20_action_weights_dqn_keras.h5")
             # self.glucoseModel.model.compile_model()
         def map_value(self,x,BW,patient):
             if "child" in patient:

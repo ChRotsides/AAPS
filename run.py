@@ -22,7 +22,7 @@ def reverse_map_value(x):
 def train_glucose(file_name,epochs=50):
     ml=LSTMModel(256,20,4,20)
     patient_name="adolescent#001"
-    ml.load_weights("GlucosePatientModels\Patient_"+patient_name+"_Dexcom_Insulet_patientDataweights20-20-age-3layers-256-time.h5")
+    ml.load_weights("GlucosePatientModels/Patient_"+patient_name+"_Dexcom_Insulet_patientDataweights20-20-age-3layers-256-time.h5")
     # ml.load_weights("PatientModels/Patient_adolescent#007_Dexcom_Insulet_patientDataweights20-20-age-3layers-256-time.h5")
     ml.load_scalar("scalar20-20-age-3layers-256-time")
     # K.set_value(ml.model.optimizer.learning_rate, 0.001)
@@ -100,7 +100,7 @@ def train_glucose(file_name,epochs=50):
 
     insulin_model=ml.create_insulin_full_model()
     insulin_model.compile(loss='mean_squared_error', optimizer='adam',metrics=['mean_squared_error'])
-    insulin_model.load_weights("InsulinPatientModels\Insulin_adolescent#001_model_20_action_weights_dqn_keras.h5")
+    insulin_model.load_weights("InsulinPatientModels/Insulin_adolescent#001_model_20_action_weights_dqn_keras.h5")
 
 
     
@@ -113,7 +113,7 @@ def train_glucose(file_name,epochs=50):
     # print(yss)
     # print(input_data[:,:1:].shape)
     insulin_model.fit([input_data[:,:,1:],pred],yss,epochs=epochs)
-    save_file_name_insulin="InsulinPatientModels\Insulin_"+file_name.replace(".json","")+"_model_20_action_weights_dqn_keras.h5"
+    save_file_name_insulin="InsulinPatientModels/Insulin_"+file_name.replace(".json","")+"_model_20_action_weights_dqn_keras.h5"
     insulin_model.save_weights(save_file_name_insulin)
     return save_file_name_glucose,save_file_name_insulin
 

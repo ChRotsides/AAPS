@@ -108,7 +108,7 @@ def main():
 
     converter = tf.lite.TFLiteConverter.from_saved_model(MODEL_DIR)
     tflite_model = converter.convert()
-    with open("AndroidModels\GlucoseModel1"+'.tflite', 'wb') as f:
+    with open("AndroidModels/GlucoseModel1"+'.tflite', 'wb') as f:
         f.write(tflite_model)
 
         
@@ -125,7 +125,7 @@ def main():
 
     converter = tf.lite.TFLiteConverter.from_saved_model(MODEL_DIR)
     tflite_model = converter.convert()
-    with open("AndroidModels\GlucoseModel2"+'.tflite', 'wb') as f:
+    with open("AndroidModels/GlucoseModel2"+'.tflite', 'wb') as f:
         f.write(tflite_model)
 
 if __name__ == "__main__":

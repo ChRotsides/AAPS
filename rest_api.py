@@ -118,17 +118,12 @@ def get_glucose_model(patient_name,part):
 
 def save_data(data):
     # print(data)
-    with open('PatientData\patient_data.json', 'w') as f:
+    with open('PatientData/patient_data.json', 'w') as f:
         json.dump(data, f)
 
 if __name__ == '__main__':
     import sys
-    ip=''
-    port=''
-    if sys.argv[1] is None:
-        ip='192.168.0.2'
-        port='5000'
-    else:
-        ip=sys.argv[1]
-        port=sys.argv[2]
+    # usage: python rest_api.py [HOST] [PORT]   (defaults: 127.0.0.1 5000)
+    ip = sys.argv[1] if len(sys.argv) > 1 else '127.0.0.1'
+    port = int(sys.argv[2]) if len(sys.argv) > 2 else 5000
     app.run(host=ip, port=port)

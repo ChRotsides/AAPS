@@ -73,7 +73,7 @@ def checkAndgetArgs():
 
 def main():
     patient_name= checkAndgetArgs()
-    originalModelPath="GlucosePatientModels\Patient_"+patient_name+"_Dexcom_Insulet_patientDataweights20-20-age-3layers-256-time.h5"
+    originalModelPath="GlucosePatientModels/Patient_"+patient_name+"_Dexcom_Insulet_patientDataweights20-20-age-3layers-256-time.h5"
     newModelPath1="SplitGlucoseModels/"+patient_name+"_Dexcom_Insulet_patientDataweights20-20-age-3layers-256-time-part1"
     newModelPath2="SplitGlucoseModels/"+patient_name+"_Dexcom_Insulet_patientDataweights20-20-age-3layers-256-time-part2"
     model_full=create_full_model()
