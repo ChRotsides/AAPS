@@ -1,4 +1,4 @@
-# t1d-glucose-insulin-nn
+# AAPS: glucose forecasting and insulin dosing for type 1 diabetes
 
 Neural networks for glucose forecasting and insulin dosing, built on a simulator of virtual type 1 diabetes patients.
 
@@ -6,9 +6,8 @@ Neural networks for glucose forecasting and insulin dosing, built on a simulator
 > *simulated* patients, it is not a medical device, and it must not be used to make or inform decisions about
 > real insulin dosing or any other treatment. Do not connect it to a real pump or a real person's CGM data.
 
-> **Name.** Despite the "AAPS" label inside the Android screenshots, this project has nothing to do with
-> [AndroidAPS](https://github.com/nightscout/AndroidAPS) (the open-source artificial pancreas system). The
-> repository was previously called `AAPS`.
+> **Name.** Despite the name, this project has nothing to do with
+> [AndroidAPS](https://github.com/nightscout/AndroidAPS) (the open-source artificial pancreas system).
 
 ## What it is
 
@@ -143,8 +142,8 @@ is why the repository is about 200 MB.
 Python 3.10 is what the project was verified with.
 
 ```bash
-git clone https://github.com/ChRotsides/t1d-glucose-insulin-nn.git
-cd t1d-glucose-insulin-nn
+git clone https://github.com/ChRotsides/AAPS.git
+cd AAPS
 python -m venv .venv
 source .venv/bin/activate          # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
@@ -231,9 +230,13 @@ and the exporters are not covered by tests.
 - Thesis team: Antreana Christoforidi, Charalambos Rotsides, Constantinos Palochis, Maria Ashikali and Theofanis
   Lymbouris.
 
-## License
+## Authors and copyright
 
-Free for noncommercial and research use under the [PolyForm Noncommercial License 1.0.0](LICENSE). Commercial use
-requires a separate license: contact lhampis@gmail.com.
+AAPS was built as a final-year Computer Engineering thesis project by Antreana Christoforidi, Charalambos
+Rotsides, Constantinos Palochis, Maria Ashikali and Theofanis Lymbouris.
 
-Copyright 2023-2026 Charalambos Rotsides. Third-party components keep their own licenses.
+Copyright 2023 the authors. All rights reserved: no license is granted to reuse, modify or redistribute this
+code. For permission, contact Charalambos Rotsides at
+[charalambosrotsides@gmail.com](mailto:charalambosrotsides@gmail.com) or
+[charalambosrotsides@outlook.com](mailto:charalambosrotsides@outlook.com). Third-party components keep their
+own licenses (see `THIRD_PARTY_NOTICES.md`).
